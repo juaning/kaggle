@@ -10,6 +10,8 @@ import numpy as np
 
 #Open up the csv file in to a Python object
 csv_file_object = csv.reader(open('csv/train.csv', 'rb')) 
+test_file_obect = csv.reader(open('../csv/test.csv', 'rb'))
+header = test_file_obect.next()
 open_file_object = csv.writer(open("csv/genderbasedmodelpy.csv", "wb"))
 header = csv_file_object.next()  #The next() command just skips the 
 #                                 #first line which is a header
